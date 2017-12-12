@@ -4,31 +4,49 @@ body {
     margin: 0;
 }
 
+h1 {
+    font-size: 8em;
+    margin-bottom: 0.25em;
+}
+
+h2 {
+    font-size: 6em;
+    margin: 1em 0;
+}
+
 .banner {
     background-color: #000;
     color: white;
     text-align: center;
+    padding-top: 0.1px;
+    padding-bottom: 4em;
+}
+
+.banner > p {
+    font-size: 1.5em;
 }
 
 .section {
     text-align: center;
 }
 
-nav > a {
-    color: white;
-    padding: 0 10px;
-}
-
-nav > a:visited {
-    color: #aaa;
-}
-
-nav > a:hover {
-    color: #666;
-}
-
-nav > a:active {
+a {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    padding: 0.5em 2em;
+    border-radius: 3px;
+    text-decoration: none;
     color: #444;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+a.primary {
+    background-color: #ffd400;
+}
+
+a.secondary {
+    background-color: #ddd;
 }
 
 .required {
@@ -124,4 +142,50 @@ fieldset > label {
 legend {
     padding-left: 0;
     padding-bottom: 3px;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 3em;
+}
+
+.section {
+    margin-top: 100px;
+}
+
+/* 1299 */
+@media (max-width: 980px) {
+    h1 {
+        margin-bottom: 1em;
+    }
+
+    h2 {
+        margin: 2em 0;
+    }
+
+    .banner {
+        padding-bottom: 9em;
+    }
+
+    .banner > img {
+        margin-bottom: 10em;
+    }
+
+    .banner > p {
+        font-size: 2em;
+        margin-top: 2em;
+        margin-bottom: 4em;
+    }
+
+    /* nav { */
+    /*     font-size: 2.5em; */
+    /*     /\* margin: 0 0.75em 2em 0.75em; *\/ */
+    /*     margin-left: auto; */
+    /*     margin-right: auto; */
+    /*     margin-bottom: 3em; */
+    /* } */
+
+    a {
+        font-size: 2.25em;
+    }
 }
