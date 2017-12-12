@@ -1,0 +1,23 @@
+{
+  "name": "thetrashpandas",
+  "version": "0.0.0",
+  "description": "website for the trash pandas band",
+  "main": "index.html",
+  "scripts": {
+    "start": "reload --browser --exts html,css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coldpour/thetrashpandas.git"
+  },
+  "author": "coldpour",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coldpour/thetrashpandas/issues"
+  },
+  "homepage": "https://github.com/coldpour/thetrashpandas#readme",
+  "devDependencies": {
+    "reload": "^2.2.2"
+  }
+}
