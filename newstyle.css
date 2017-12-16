@@ -9,7 +9,7 @@ h1 {
     margin-top: 0;
 }
 
-.banner {
+header {
     color: #fff;
     background-color: #000;
     padding: 2rem 0;
@@ -20,7 +20,7 @@ p {
     font-size: 1.25rem;
 }
 
-.banner > * {
+header > * {
     margin-bottom: 1rem;
 }
 
@@ -31,12 +31,10 @@ p {
 .photo {
     background-color: #000;
     text-align: center;
-    padding-top: 10rem;
-    padding-bottom: 3rem;
     background-image: url('images/banner.png');
     background-size: cover;
     background-position: top;
-    height: 2rem;
+    height: 15rem;
 }
 
 nav {
@@ -45,19 +43,22 @@ nav {
     text-align: center;
 }
 
-a.button {
+nav > * {
+    margin: 0 0.5rem;
+}
+
+.button {
     text-decoration: none;
     color: #333;
     padding: 0.75rem 2rem;
-    margin: 0 0.5rem;
     border-radius: 3px;
 }
 
-a.primary {
+.primary {
     background-color: #ffd400;
 }
 
-a.secondary {
+.secondary {
     background-color: #ddd;
 }
 
@@ -173,4 +174,26 @@ fieldset > label {
 legend {
     padding-left: 0;
     padding-bottom: 3px;
+}
+
+@media (min-width: 525px) {
+    header > h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 700px) {
+    header > h1 {
+        font-size: 5rem;
+    }
+
+    .photo {
+        height: 28rem;
+    }
+}
+
+@media (min-width: 900px) {
+    header > h1 {
+        font-size: 7rem;
+    }
 }
