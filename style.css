@@ -71,16 +71,31 @@ nav > * {
     background-color: #ddd;
 }
 
-.yokam {
+.songsHead {
   font-size: 4vw;
 }
 
-.siasw {
-  font-size: 5.6vw;
+.songs {
+  font-size: 2vw;
 }
 
-ol {
-  padding-inline-start: 5rem;
+.justify {
+  text-align: justify;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+quote {
+  color: #555;
+  text-align: right;
+}
+
+quote:before {
+  content: '"';
+}
+
+quote:after {
+  content: '"';
 }
 
 footer {
