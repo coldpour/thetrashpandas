@@ -1,5 +1,5 @@
 # The Trash Pandas Website
 
-* `npm start` will run a reload server
+* `yarn && yarn start` will run a dev server
 * deploy previews of PRs in netlify
 * push to `master` to deploy
