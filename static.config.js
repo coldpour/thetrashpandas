@@ -22,7 +22,7 @@ export default {
               return { title, artist };
             })
             .sort((one, two) => {
-              const [a1, a2] = [one, two].map(song => song["artist"]);
+              const [a1, a2] = [one, two].map(song => song.artist);
               return asc(a1, a2);
             })
         })
