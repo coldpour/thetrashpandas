@@ -1,13 +1,18 @@
-import React from 'react'
+import React from "react";
+import { useRouteData } from "react-static";
 //
-import Banner from 'components/Banner'
-import Soundcloud from 'components/Soundcloud'
-import Songs from 'components/Songs'
+import Banner from "components/Banner";
+import Soundcloud from "components/Soundcloud";
+import Songs from "components/Songs";
 
-export default () => (
-  <div style={{ textAlign: 'center' }}>
-    <Banner />
-    <Soundcloud />
-    <Songs />
-  </div>
-)
+export default () => {
+  const { songs } = useRouteData();
+
+  return (
+    <div style={{ textAlign: "center" }}>
+      <Banner />
+      <Soundcloud />
+      <Songs songs={songs} />
+    </div>
+  );
+};

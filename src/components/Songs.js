@@ -1,22 +1,19 @@
-import React from 'react'
+import React from "react";
 
-import songs from './song-data.js'
-
-export default () => (
+export default ({ songs }) => (
   <div>
     <h1>Songs</h1>
     <table>
       <tbody>
-        {songs.map(song => {
-          const [title, artist] = song.split('-')
+        {songs.map(({ title, artist }) => {
           return (
-            <tr key={song}>
+            <tr key={title + artist}>
               <td>{title}</td>
               <td>{artist}</td>
             </tr>
-          )
+          );
         })}
       </tbody>
     </table>
   </div>
-)
+);
