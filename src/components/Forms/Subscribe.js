@@ -16,7 +16,7 @@ const StyledFieldset = ({ style, ...restProps }) => (
 
 const NameField = ({ style, ...restProps }) => (
   <FormField
-    style={{ flex: 1, minWidth: "300px", margin: "0 .25em" }}
+    style={{ flex: 1, minWidth: "300px", margin: ".25em", ...style }}
     {...restProps}
   />
 );

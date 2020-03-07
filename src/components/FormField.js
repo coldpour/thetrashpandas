@@ -4,9 +4,13 @@ import Input from "components/Input";
 
 let count = 123;
 
+const StyledInput = ({ style, ...restProps }) => (
+  <Input style={{ marginTop: ".25em", ...style }} {...restProps} />
+);
+
 const FormField = ({ style, name, id, input, children, ...restProps }) => {
   const myId = id || `${name}-${count++}`;
-  const MyInput = input || Input;
+  const MyInput = input || StyledInput;
 
   return (
     <label

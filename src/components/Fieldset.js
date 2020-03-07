@@ -6,6 +6,7 @@ const Fieldset = ({ style, legend, children, ...restProps }) => {
       role="fieldset"
       style={{
         border: "1px solid #666",
+        borderRadius: "5px",
         position: "relative",
         paddingTop: "1em",
         marginTop: "1em",
