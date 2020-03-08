@@ -112,7 +112,11 @@ const SubscribeForm = () => (
         value=""
       />
     </div>
-    <Button type="submit" name="subscribe" style={{ margin: "2em" }}>
+    <Button
+      type="submit"
+      name="subscribe"
+      style={{ margin: "2em", fontSize: "16px" }}
+    >
       submit
     </Button>
   </form>
