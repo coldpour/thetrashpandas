@@ -58,6 +58,7 @@ const SubscribeForm = () => (
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          justifyContent: "center",
           minWidth: "100px"
         }}
       >
