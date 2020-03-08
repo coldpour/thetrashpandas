@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({ primary, style, ...restProps }) => {
+const Button = ({ primary, style, ...restProps }) => {
   return (
     <button
       style={{
@@ -15,3 +15,5 @@ export default ({ primary, style, ...restProps }) => {
     />
   );
 };
+
+export default Button;
