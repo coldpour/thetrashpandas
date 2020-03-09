@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 //
 import Button from "components/Button";
-import Subscribe from "components/Forms/Subscribe";
+import SubscribeForm from "components/Forms/SubscribeForm";
+import BookUsForm from "components/Forms/BookUsForm";
 
 const BOOK = "BOOK";
 const SUBSCRIBE = "SUBSCRIBE";
@@ -19,7 +20,7 @@ const StyledButton = ({ style, ...restProps }) => (
 );
 
 export default () => {
-  const [open, setOpen] = useState(SUBSCRIBE);
+  const [open, setOpen] = useState(BOOK);
   return (
     <div>
       <div
@@ -41,11 +42,13 @@ export default () => {
       </div>
       <div
         style={{
-          transition: "all .3s ease-out",
-          maxHeight: open ? "1000px" : 0
+          transition: "all 3s ease-out",
+          maxHeight: open ? "1000px" : 0,
+          overflow: "hidden"
         }}
       >
-        {SUBSCRIBE && <Subscribe />}
+        <SubscribeForm open={open === SUBSCRIBE} />
+        <BookUsForm open={open === BOOK} />
       </div>
     </div>
   );

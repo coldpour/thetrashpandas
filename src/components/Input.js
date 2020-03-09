@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 //
+const DefaultElement = props => <input {...props} />;
+
 const Input = ({
   style,
   onMouseOver,
   onMouseOut,
   onFocus,
   onBlur,
+  element,
   ...restProps
 }) => {
   const [hover, setHover] = useState(false);
   const [focus, setFocus] = useState(false);
+  const Element = element || DefaultElement;
 
   return (
     <div
@@ -18,21 +22,19 @@ const Input = ({
         backgroundColor: hover ? "#444" : focus ? "#333" : "#222",
         padding: ".5em",
         borderRadius: "5px",
-        // borderRadius: "5px 5px 0 0",
         ...style
       }}
     >
-      <input
+      <Element
         style={{
-          padding: 0,
-          color: "white",
-          display: "block",
-          borderRadius: "4px",
           background: "none",
           border: "none",
+          color: "white",
+          display: "block",
           fontSize: "20px",
-          width: "100%",
-          outline: "none"
+          outline: "none",
+          padding: 0,
+          width: "100%"
         }}
         onMouseOver={e => {
           setHover(true);

@@ -21,13 +21,19 @@ const NameField = ({ style, ...restProps }) => (
   />
 );
 
-const SubscribeForm = () => (
+const SubscribeForm = ({ open }) => (
   <form
     action="https:facebook.us17.list-manage.com/subscribe/post?u=576be0d24557fe6a480b06523&amp;id=b5af92ccb0"
     method="post"
     name="mc-embedded-subscribe-form"
     target="_blank"
     noValidate
+    style={{
+      transition: "all 1s ease-out",
+      opacity: open ? 1 : 0,
+      visibility: open ? "visible" : "hidden",
+      position: open ? "static" : "absolute"
+    }}
   >
     <h2 style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
       <HeadlineSpan>wanna hear about</HeadlineSpan>{" "}
