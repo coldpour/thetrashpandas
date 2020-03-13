@@ -1,5 +1,6 @@
 import React from "react";
 //
+import Form from "components/Form";
 import Button from "components/Button";
 import Input from "components/Input";
 import FormField from "components/FormField";
@@ -21,17 +22,14 @@ const NameField = ({ style, ...restProps }) => (
   />
 );
 
-const SubscribeForm = ({ style }) => (
-  <form
+const SubscribeForm = props => (
+  <Form
     action="https:facebook.us17.list-manage.com/subscribe/post?u=576be0d24557fe6a480b06523&amp;id=b5af92ccb0"
     method="post"
     name="mc-embedded-subscribe-form"
     target="_blank"
     noValidate
-    style={{
-      textAlign: "center",
-      ...style
-    }}
+    {...props}
   >
     <h2 style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
       <HeadlineSpan>wanna hear about</HeadlineSpan>{" "}
@@ -123,7 +121,7 @@ const SubscribeForm = ({ style }) => (
     >
       submit
     </Button>
-  </form>
+  </Form>
 );
 
 export default SubscribeForm;

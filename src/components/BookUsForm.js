@@ -1,5 +1,6 @@
 import React from "react";
 //
+import Form from "components/Form";
 import FormField from "components/FormField";
 import Button from "components/Button";
 import TextArea from "components/TextArea";
@@ -8,15 +9,12 @@ const StyledTextArea = ({ style, ...restProps }) => (
   <TextArea style={{ marginTop: ".25em", ...style }} {...restProps} />
 );
 
-const BookUs = ({ history, style }) => (
-  <form
+const BookUs = ({ history, ...restProps }) => (
+  <Form
     action="mailto:thetrashpandasmusic@gmail.com"
     method="post"
     onSubmit={() => history.push()}
-    style={{
-      textAlign: "center",
-      ...style
-    }}
+    {...restProps}
   >
     <h2 style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
       want us to rock your party?
@@ -47,7 +45,7 @@ const BookUs = ({ history, style }) => (
     <input type="hidden" name="_wp_http_referer" value="/booking/" />
     <input type="hidden" name="contact-form-id" value="67" />
     <input type="hidden" name="action" value="grunion-contact-form" />
-  </form>
+  </Form>
 );
 
 export default BookUs;

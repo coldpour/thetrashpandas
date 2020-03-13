@@ -8,26 +8,17 @@ export default () => (
   <div>
     <Nav />
     <div style={{ position: "relative" }}>
-      <Banner />
-      <div
+      <Banner style={{ opacity: ".1" }} />
+      <BookUsForm
         style={{
-          background: "#000e",
           position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0
+          top: "10vw",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "80%",
+          maxWidth: "350px"
         }}
-      >
-        <BookUsForm
-          style={{
-            position: "absolute",
-            top: "10vw",
-            left: "50%",
-            transform: "translateX(-50%)"
-          }}
-        />
-      </div>
+      />
     </div>
   </div>
 );
