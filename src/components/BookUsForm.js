@@ -8,15 +8,14 @@ const StyledTextArea = ({ style, ...restProps }) => (
   <TextArea style={{ marginTop: ".25em", ...style }} {...restProps} />
 );
 
-const BookUs = ({ open }) => (
+const BookUs = ({ history, style }) => (
   <form
     action="mailto:thetrashpandasmusic@gmail.com"
     method="post"
+    onSubmit={() => history.push()}
     style={{
-      transition: "all 1s ease-out",
-      opacity: open ? 1 : 0,
-      visibility: open ? "visible" : "hidden",
-      position: open ? "static" : "absolute"
+      textAlign: "center",
+      ...style
     }}
   >
     <h2 style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>

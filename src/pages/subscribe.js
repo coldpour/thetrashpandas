@@ -1,12 +1,13 @@
-import React from 'react'
+import React from "react";
 //
-import Nav from 'components/Nav'
+import Nav from "components/Nav";
+import Banner from "components/Banner";
+import SubscribeForm from "components/SubscribeForm";
 
 export default () => (
   <div>
     <Nav />
-    <div className="content">
-      <h1>Join the Trash Panda collective!</h1>
-    </div>
+    <Banner />
+    <SubscribeForm />
   </div>
-)
+);

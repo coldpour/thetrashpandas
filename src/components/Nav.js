@@ -1,14 +1,36 @@
-import React from 'react'
+import React from "react";
 
-import { Link } from 'components/Router'
+import { Link } from "components/Router";
 
-export default function Nav() {
+const NavLink = ({ style, ...restProps }) => (
+  <Link
+    style={{
+      color: "white",
+      textDecoration: "none",
+      fontWeight: "bold",
+      fontSize: "24px",
+      ...style
+    }}
+    {...restProps}
+  />
+);
+
+const Nav = ({ style }) => {
   return (
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/subscribe">Subscribe</Link>
-      <Link to="/book">Book</Link>
-      <Link to="/blog">Blog</Link>
+    <nav
+      style={{
+        padding: "2em",
+        display: "flex",
+        justifyContent: "space-evenly",
+        maxWidth: "400px",
+        margin: "auto"
+      }}
+    >
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/subscribe">Subscribe</NavLink>
+      <NavLink to="/book">Book</NavLink>
     </nav>
-  )
-}
+  );
+};
+
+export default Nav;
