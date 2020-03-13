@@ -38,19 +38,19 @@ const Input = ({
         }}
         onMouseOver={e => {
           setHover(true);
-          onMouseOver(e);
+          if (onMouseOver) onMouseOver(e);
         }}
         onMouseOut={e => {
           setHover(false);
-          onMouseOut(e);
+          if (onMouseOut) onMouseOut(e);
         }}
         onFocus={e => {
           setFocus(true);
-          onFocus(e);
+          if (onFocus) onFocus(e);
         }}
         onBlur={e => {
           setFocus(false);
-          onBlur(e);
+          if (onBlur) onBlur(e);
         }}
         {...restProps}
       />
