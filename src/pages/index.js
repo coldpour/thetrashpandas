@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouteData } from "react-static";
+import { Helmet } from "react-helmet";
 //
 import Nav from "components/Nav";
 import Banner from "components/Banner";
@@ -11,6 +12,9 @@ export default () => {
 
   return (
     <div style={{ textAlign: "center" }}>
+      <Helmet>
+        <title>Trash Pandas | Home</title>
+      </Helmet>
       <Nav />
       <Banner />
       <Soundcloud />

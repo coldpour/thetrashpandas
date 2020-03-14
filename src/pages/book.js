@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 //
 import Nav from "components/Nav";
 import Banner from "components/Banner";
@@ -6,6 +7,9 @@ import BookUsForm from "components/BookUsForm";
 
 export default () => (
   <div>
+    <Helmet>
+      <title>Trash Pandas | Book Us</title>
+    </Helmet>
     <Nav />
     <div style={{ position: "relative" }}>
       <Banner style={{ opacity: ".1" }} />
