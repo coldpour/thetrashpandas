@@ -41,10 +41,15 @@ const BookUs = ({ history, ...restProps }) => (
       submit
     </Button>
 
-    <input type="hidden" id="_wpnonce" name="_wpnonce" value="0d69e663d7" />
-    <input type="hidden" name="_wp_http_referer" value="/booking/" />
-    <input type="hidden" name="contact-form-id" value="67" />
-    <input type="hidden" name="action" value="grunion-contact-form" />
+    <input
+      type="hidden"
+      id="_wpnonce"
+      name="_wpnonce"
+      defaultValue="0d69e663d7"
+    />
+    <input type="hidden" name="_wp_http_referer" defaultValue="/booking/" />
+    <input type="hidden" name="contact-form-id" defaultValue="67" />
+    <input type="hidden" name="action" defaultValue="grunion-contact-form" />
   </Form>
 );
 

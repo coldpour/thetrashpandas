@@ -65,7 +65,8 @@ const SubscribeForm = props => (
         <FormField
           name="EMAILTYPE"
           input={Radio}
-          value="html"
+          defaultValue="html"
+          defaultChecked
           style={{
             display: "flex",
             justifyContent: "space-between",
@@ -77,7 +78,7 @@ const SubscribeForm = props => (
         <FormField
           name="EMAILTYPE"
           input={Radio}
-          value="text"
+          defaultValue="text"
           style={{
             display: "flex",
             justifyContent: "space-between",
@@ -109,7 +110,7 @@ const SubscribeForm = props => (
         type="text"
         name="b_576be0d24557fe6a480b06523_b5af92ccb0"
         tabIndex="-1"
-        value=""
+        defaultValue=""
       />
     </div>
     <Button
