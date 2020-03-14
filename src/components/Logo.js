@@ -45,16 +45,16 @@ const Logo = props => (
             href="#b2CZ9tOpN"
             opacity="1"
             fill="#ffffff"
-            fill-opacity="1"
+            fillOpacity="1"
           ></use>
           <g>
             <use
               href="#b2CZ9tOpN"
               opacity="1"
-              fill-opacity="0"
+              fillOpacity="0"
               stroke="#000000"
-              stroke-width="1"
-              stroke-opacity="0"
+              strokeWidth="1"
+              strokeOpacity="0"
             ></use>
           </g>
         </g>
@@ -63,16 +63,16 @@ const Logo = props => (
             href="#a1MWaQx3qn"
             opacity="1"
             fill="#ffffff"
-            fill-opacity="1"
+            fillOpacity="1"
           ></use>
           <g>
             <use
               href="#a1MWaQx3qn"
               opacity="1"
-              fill-opacity="0"
+              fillOpacity="0"
               stroke="#000000"
-              stroke-width="1"
-              stroke-opacity="0"
+              strokeWidth="1"
+              strokeOpacity="0"
             ></use>
           </g>
         </g>
@@ -81,16 +81,16 @@ const Logo = props => (
             href="#b19rNWuot"
             opacity="1"
             fill="#ffffff"
-            fill-opacity="1"
+            fillOpacity="1"
           ></use>
           <g>
             <use
               href="#b19rNWuot"
               opacity="1"
-              fill-opacity="0"
+              fillOpacity="0"
               stroke="#000000"
-              stroke-width="1"
-              stroke-opacity="0"
+              strokeWidth="1"
+              strokeOpacity="0"
             ></use>
           </g>
         </g>
@@ -99,16 +99,16 @@ const Logo = props => (
             href="#a7JV3VAoVN"
             opacity="1"
             fill="#ffffff"
-            fill-opacity="1"
+            fillOpacity="1"
           ></use>
           <g>
             <use
               href="#a7JV3VAoVN"
               opacity="1"
-              fill-opacity="0"
+              fillOpacity="0"
               stroke="#000000"
-              stroke-width="1"
-              stroke-opacity="0"
+              strokeWidth="1"
+              strokeOpacity="0"
             ></use>
           </g>
         </g>
@@ -117,16 +117,16 @@ const Logo = props => (
             href="#jbDJzBtok"
             opacity="1"
             fill="#ffffff"
-            fill-opacity="1"
+            fillOpacity="1"
           ></use>
           <g>
             <use
               href="#jbDJzBtok"
               opacity="1"
-              fill-opacity="0"
+              fillOpacity="0"
               stroke="#000000"
-              stroke-width="1"
-              stroke-opacity="0"
+              strokeWidth="1"
+              strokeOpacity="0"
             ></use>
           </g>
         </g>
@@ -135,16 +135,16 @@ const Logo = props => (
             href="#iIDqaeNNU"
             opacity="1"
             fill="#ffffff"
-            fill-opacity="1"
+            fillOpacity="1"
           ></use>
           <g>
             <use
               href="#iIDqaeNNU"
               opacity="1"
-              fill-opacity="0"
+              fillOpacity="0"
               stroke="#000000"
-              stroke-width="1"
-              stroke-opacity="0"
+              strokeWidth="1"
+              strokeOpacity="0"
             ></use>
           </g>
         </g>
@@ -153,16 +153,16 @@ const Logo = props => (
             href="#g1AL3iZycW"
             opacity="1"
             fill="#ffffff"
-            fill-opacity="1"
+            fillOpacity="1"
           ></use>
           <g>
             <use
               href="#g1AL3iZycW"
               opacity="1"
-              fill-opacity="0"
+              fillOpacity="0"
               stroke="#000000"
-              stroke-width="1"
-              stroke-opacity="0"
+              strokeWidth="1"
+              strokeOpacity="0"
             ></use>
           </g>
         </g>
@@ -171,16 +171,16 @@ const Logo = props => (
             href="#a4aqzQDxk3"
             opacity="1"
             fill="#ffffff"
-            fill-opacity="1"
+            fillOpacity="1"
           ></use>
           <g>
             <use
               href="#a4aqzQDxk3"
               opacity="1"
-              fill-opacity="0"
+              fillOpacity="0"
               stroke="#000000"
-              stroke-width="1"
-              stroke-opacity="0"
+              strokeWidth="1"
+              strokeOpacity="0"
             ></use>
           </g>
         </g>
