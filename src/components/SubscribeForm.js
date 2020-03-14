@@ -27,8 +27,6 @@ const SubscribeForm = props => (
     action="https:facebook.us17.list-manage.com/subscribe/post?u=576be0d24557fe6a480b06523&amp;id=b5af92ccb0"
     method="post"
     name="mc-embedded-subscribe-form"
-    target="_blank"
-    noValidate
     {...props}
   >
     <h2 style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
