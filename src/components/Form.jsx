@@ -1,7 +1,7 @@
 import React from "react";
 
 const Form = ({ style, ...restProps }) => (
-  <Form
+  <form
     style={{ textAlign: "center", width: "100%", ...style }}
     {...restProps}
   />
