@@ -32,6 +32,7 @@ const Input = ({
           color: "white",
           display: "block",
           fontSize: "20px",
+          fontFamily: "inherit",
           outline: "none",
           padding: 0,
           width: "100%"
