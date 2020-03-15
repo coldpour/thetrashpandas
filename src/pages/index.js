@@ -6,6 +6,7 @@ import Nav from "components/Nav";
 import Banner from "components/Banner";
 import Soundcloud from "components/Soundcloud";
 import Songs from "components/Songs";
+import Footer from "components/Footer";
 
 export default () => {
   const { songs } = useRouteData();
@@ -19,6 +20,7 @@ export default () => {
       <Banner />
       <Soundcloud />
       <Songs songs={songs} />
+      <Footer />
     </div>
   );
 };
