@@ -31,7 +31,7 @@ const Social = ({ style, ...restProps }) => (
   >
     {links.map(([name, url, Icon]) => (
       <a key={name} href={url} style={{ margin: ".75em" }}>
-        {Icon ? <Icon style={{ width: "40px" }} /> : name}
+        {Icon ? <Icon style={{ width: "30px" }} /> : name}
       </a>
     ))}
   </div>
