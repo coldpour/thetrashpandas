@@ -1,24 +1,22 @@
 import path from "path";
 import axios from "axios";
 //
-import songs from "./data/songs.js";
+import { songsInDoneColumn } from "./requests";
 
 const asc = (a, b) => (a < b ? -1 : a === b ? 0 : 1);
 const desc = (a, b) => (a > b ? -1 : a === b ? 0 : 1);
 
 export default {
   getRoutes: async () => {
-    const { data: posts } = await axios.get(
-      "https://jsonplaceholder.typicode.com/posts"
-    );
+    const { data: cards } = await axios.get(songsInDoneColumn);
 
     return [
       {
         path: "/",
         getData: () => ({
-          songs: songs
-            .map(song => {
-              const [title, artist] = song.split("-").map(s => s.trim());
+          songs: cards
+            .map(({ name }) => {
+              const [title, artist] = name.split("-").map(s => s.trim());
               return { title, artist };
             })
             .sort((one, two) => {
@@ -26,19 +24,6 @@ export default {
               return asc(a1, a2);
             })
         })
-      },
-      {
-        path: "/blog",
-        getData: () => ({
-          posts
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          template: "src/containers/Post",
-          getData: () => ({
-            post
-          })
-        }))
       }
     ];
   },

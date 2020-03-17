@@ -2,10 +2,10 @@
   "name": "react-static-example-basic",
   "private": true,
   "scripts": {
-    "start": "react-static start",
-    "stage": "react-static build --staging",
-    "build": "react-static build",
-    "analyze": "react-static build --analyze",
+    "start": "bin/react-static start",
+    "stage": "bin/react-static build --staging",
+    "build": "bin/react-static build",
+    "analyze": "bin/react-static build --analyze",
     "lint": "prettier --check src/*.{js,css} src/**/*.{js,css}",
     "lint:fix": "prettier --write src/*.{js,css} src/**/*.{js,css}",
     "serve": "serve dist -p 3000"
@@ -13,6 +13,7 @@
   "dependencies": {
     "@reach/router": "^1.2.1",
     "axios": "^0.19.0",
+    "dotenv": "^8.2.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
