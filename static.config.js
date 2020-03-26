@@ -1,14 +1,22 @@
 import path from "path";
 import axios from "axios";
 //
-import { songsInDoneColumn } from "./requests";
+import { songsInDoneColumn, songsInWarmUpColumn } from "./requests";
 
 const asc = (a, b) => (a < b ? -1 : a === b ? 0 : 1);
 const desc = (a, b) => (a > b ? -1 : a === b ? 0 : 1);
 
 export default {
   getRoutes: async () => {
-    const { data: cards } = await axios.get(songsInDoneColumn);
+    const [
+      { data: cardsInDone },
+      { data: cardsInWarmUps }
+    ] = await Promise.all([
+      axios.get(songsInDoneColumn),
+      axios.get(songsInWarmUpColumn)
+    ]);
+
+    const cards = cardsInDone.concat(cardsInWarmUps);
 
     return [
       {
