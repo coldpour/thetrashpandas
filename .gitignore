@@ -3,3 +3,5 @@ artifacts
 tmp
 .DS_Store
 dist
+.env
+

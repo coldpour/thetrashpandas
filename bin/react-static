@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+node -r dotenv/config node_modules/.bin/react-static "$@"
+
