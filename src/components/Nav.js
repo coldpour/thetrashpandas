@@ -3,8 +3,8 @@ import React from "react";
 import { Link } from "components/Router";
 import Logo from "components/Logo";
 
-const NavLink = ({ style, ...restProps }) => (
-  <Link
+const NavLink = ({ element: Element, style, ...restProps }) => (
+  <Element
     style={{
       color: "white",
       textDecoration: "none",
@@ -16,6 +16,8 @@ const NavLink = ({ style, ...restProps }) => (
   />
 );
 
+NavLink.defaultProps = { element: Link };
+
 const Nav = ({ style }) => {
   return (
     <nav
@@ -24,7 +26,8 @@ const Nav = ({ style }) => {
         maxWidth: "400px",
         display: "flex",
         alignItems: "center",
-        margin: "auto"
+        margin: "auto",
+        ...style
       }}
     >
       <NavLink
@@ -36,12 +39,11 @@ const Nav = ({ style }) => {
         <Logo style={{ height: "40px" }} />
       </NavLink>
       <div style={{ display: "flex", flex: 1, justifyContent: "space-evenly" }}>
-        <NavLink to="/book" style={{}}>
-          Book
+        <NavLink element="a" href="https://shop.spreadshirt.com/trash-pandas">
+          Merch
         </NavLink>
-        <NavLink to="/subscribe" style={{}}>
-          Subscribe
-        </NavLink>
+        <NavLink to="/book">Book</NavLink>
+        <NavLink to="/subscribe">Subscribe</NavLink>
       </div>
     </nav>
   );
