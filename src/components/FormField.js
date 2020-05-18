@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 //
 import Input from "components/Input";
 
@@ -9,8 +9,11 @@ const StyledInput = ({ style, ...restProps }) => (
 );
 
 const FormField = ({ style, name, id, input, children, ...restProps }) => {
+  const [focused, setFocused] = useState(false);
+  const [changed, setChanged] = useState(false);
   const myId = id || `${name}-${count++}`;
   const MyInput = input || StyledInput;
+  const labelAbove = focused || changed;
 
   return (
     <label
@@ -21,8 +24,27 @@ const FormField = ({ style, name, id, input, children, ...restProps }) => {
       }}
       htmlFor={myId}
     >
-      <div style={{ textAlign: "left" }}>{children}</div>
-      <MyInput id={myId} name={name} {...restProps} />
+      <div
+        style={{
+          textAlign: "left",
+          zIndex: 1,
+          position: "relative",
+          transition: "all .15s linear",
+          transform: labelAbove ? "" : "translate(42px, 34px) scale(1.25)",
+          opacity: labelAbove ? 1 : 0
+        }}
+      >
+        {children}
+      </div>
+      <MyInput
+        id={myId}
+        name={name}
+        placeholder={labelAbove ? null : children}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
+        onChange={e => setChanged(e.target.value === "" ? false : true)}
+        {...restProps}
+      />
     </label>
   );
 };

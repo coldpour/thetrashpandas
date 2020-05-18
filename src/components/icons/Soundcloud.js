@@ -3,7 +3,7 @@ import React from "react";
 import Svg from "components/Svg";
 
 const Soundcloud = props => (
-  <Svg viewBox="0 0 54.574 54.574" fill="white" strokeWeight="2" {...props}>
+  <Svg viewBox="0 0 54.574 54.574" fill="white" strokeweight="2" {...props}>
     <path
       d="M46.936,25.127c-0.127-0.013-0.242-0.025-0.346-0.037c-0.766-6.683-6.426-11.804-13.232-11.804
 			    c-2.409,0-6.142,1.152-7.869,2.182l-0.506,0.301l0.766,25.46L48,41.287c4.115,0,6.574-4.192,6.574-8.246

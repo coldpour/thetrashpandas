@@ -20,7 +20,7 @@ const Input = ({
       style={{
         position: "relative",
         backgroundColor: hover ? "#444" : focus ? "#333" : "#222",
-        padding: ".5em",
+        padding: "9px",
         borderRadius: "5px",
         ...style
       }}
