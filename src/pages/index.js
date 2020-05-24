@@ -19,8 +19,8 @@ export default () => {
       </Helmet>
       <Nav />
       <Hero />
-      <Banner />
       <Soundcloud />
+      <Banner />
       <Songs songs={songs} />
       <Footer />
     </div>

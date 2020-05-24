@@ -1,53 +1,36 @@
+/** @jsx jsx */
 import React from "react";
+import { css, jsx } from "@emotion/core";
 
-import { Link } from "components/Router";
-import Logo from "components/Logo";
+import MerchLink from "components/links/MerchLink";
+import HomeLink from "components/links/HomeLink";
+import BookLink from "components/links/BookLink";
+import ListenLink from "components/links/ListenLink";
 
-const NavLink = ({ element: Element, style, ...restProps }) => (
-  <Element
-    style={{
-      color: "white",
-      textDecoration: "none",
-      fontWeight: "bold",
-      fontSize: "24px",
-      ...style
-    }}
-    {...restProps}
+const SubNav = props => (
+  <div
+    css={css`
+      display: flex;
+      justify-content: space-evenly;
+    `}
+    {...props}
   />
 );
-
-NavLink.defaultProps = { element: Link };
 
 const Nav = ({ style }) => {
   return (
     <nav
-      style={{
-        padding: "1em",
-        maxWidth: "400px",
-        display: "flex",
-        alignItems: "flex-end",
-        margin: "auto",
-        ...style
-      }}
+      css={css`
+        max-width: 400px;
+        margin: auto;
+      `}
     >
-      <NavLink
-        to="/"
-        style={{
-          lineHeight: 0.7
-        }}
-      >
-        <Logo style={{ height: "60px" }} />
-      </NavLink>
-      <div style={{ display: "flex", flex: 1, justifyContent: "flex-end" }}>
-        <NavLink
-          element="a"
-          href="https://shop.spreadshirt.com/trash-pandas"
-          style={{ margin: "0 0.5em" }}
-        >
-          merch
-        </NavLink>
-        <NavLink to="/book">book</NavLink>
-      </div>
+      <HomeLink />
+      <SubNav>
+        <MerchLink />
+        <BookLink />
+        <ListenLink />
+      </SubNav>
     </nav>
   );
 };
