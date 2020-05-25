@@ -5,11 +5,12 @@ import { useRouteData } from "react-static";
 import { Helmet } from "react-helmet";
 //
 import Nav from "components/Nav";
-import Hero from "components/Hero";
+import Video from "components/Video";
 import Banner from "components/Banner";
 import Soundcloud from "components/Soundcloud";
 import Songs from "components/Songs";
 import Footer from "components/Footer";
+import Follow from "components/Follow";
 import Announcement from "components/Announcement";
 
 export default () => {
@@ -26,7 +27,8 @@ export default () => {
         `}
       />
       <Announcement />
-      <Hero />
+      <Follow />
+      <Video />
       <Soundcloud />
       <Banner />
       <Songs songs={songs} />

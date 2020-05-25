@@ -1,15 +1,9 @@
 /** @jsx jsx */
 import React from "react";
 import { css, jsx } from "@emotion/core";
-
-const Heading = props => (
-  <h2
-    css={css`
-      margin: 0;
-    `}
-    {...props}
-  />
-);
+//
+import SubscribeForm from "components/SubscribeForm";
+import Heading from "components/Heading";
 
 const Announcement = props => (
   <div
@@ -17,11 +11,12 @@ const Announcement = props => (
       border: 1px solid white;
       color: black;
       background: white;
-      padding: 1em;
+      padding: 1.5em 1em;
     `}
   >
     <Heading>Catch us next!</Heading>
-    <div>6.20 - 9pm Full Cycle, Boulder, CO</div>
+    <div>6/10 - Bands on the Bricks</div>
+    <div>7pm - 1300 block of Pearl St. Boulder, CO</div>
   </div>
 );
 
