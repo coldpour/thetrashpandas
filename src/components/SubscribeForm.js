@@ -1,4 +1,6 @@
+/** @jsx jsx */
 import React from "react";
+import { css, jsx } from "@emotion/core";
 //
 import Form from "components/Form";
 import Button from "components/Button";
@@ -8,14 +10,13 @@ import Fieldset from "components/Fieldset";
 import Radio from "components/Radio";
 import HeadlineSpan from "components/HeadlineSpan";
 
-const StyledInput = ({ style, ...restProps }) => (
+const StyledInput = props => (
   <Input
-    style={{
-      marginTop: ".25em",
-      borderRadius: "5px 0px 0px 5px",
-      ...style
-    }}
-    {...restProps}
+    css={css`
+      margin-top: 0.25em;
+      border-radius: 5px 0px 0px 5px;
+    `}
+    {...props}
   />
 );
 
@@ -24,7 +25,10 @@ const SubscribeForm = props => (
     action="https://facebook.us17.list-manage.com/subscribe/post?u=576be0d24557fe6a480b06523&amp;id=b5af92ccb0"
     method="post"
     name="mc-embedded-subscribe-form"
-    style={{ display: "flex", alignItems: "flex-end" }}
+    css={css`
+      display: flex;
+      align-items: flex-end;
+    `}
     {...props}
   >
     <FormField
@@ -32,13 +36,15 @@ const SubscribeForm = props => (
       type="email"
       required
       input={StyledInput}
-      style={{ flex: 1 }}
+      css={css`
+        flex: 1;
+      `}
     >
       email address
     </FormField>
     {/* <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> */}
     <div
-      style={{ position: "absolute", top: "-50px", left: "-5000px" }}
+      css={{ position: "absolute", top: "-50px", left: "-5000px" }}
       aria-hidden="true"
     >
       <Input
@@ -51,7 +57,7 @@ const SubscribeForm = props => (
     <Button
       type="submit"
       name="subscribe"
-      style={{ fontSize: "16px", borderRadius: "0px 5px 5px 0px" }}
+      css={{ fontSize: "16px", borderRadius: "0px 5px 5px 0px" }}
     >
       join
     </Button>
@@ -59,3 +65,9 @@ const SubscribeForm = props => (
 );
 
 export default SubscribeForm;
+
+/*
+
+  soundcloud customization
+
+ */

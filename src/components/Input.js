@@ -1,14 +1,31 @@
+/** @jsx jsx */
 import React, { useState } from "react";
+import { css, jsx } from "@emotion/core";
 //
 const DefaultElement = props => <input {...props} />;
 
+const Underline = ({ show, ...rest }) => (
+  <div
+    css={{
+      backgroundColor: "#ccc",
+      height: "2px",
+      position: "absolute",
+      bottom: 0,
+      transition: "all 0.15s linear",
+      left: show ? 0 : "50%",
+      right: show ? 0 : "50%"
+    }}
+    {...rest}
+  />
+);
+
 const Input = ({
-  style,
   onMouseOver,
   onMouseOut,
   onFocus,
   onBlur,
   element,
+  className,
   ...restProps
 }) => {
   const [hover, setHover] = useState(false);
@@ -17,16 +34,16 @@ const Input = ({
 
   return (
     <div
-      style={{
+      className={className}
+      css={{
         position: "relative",
         backgroundColor: hover ? "#444" : focus ? "#333" : "#222",
         padding: "9px",
-        borderRadius: "5px",
-        ...style
+        borderRadius: "5px"
       }}
     >
       <Element
-        style={{
+        css={{
           background: "none",
           border: "none",
           color: "white",
@@ -55,17 +72,7 @@ const Input = ({
         }}
         {...restProps}
       />
-      <div
-        style={{
-          backgroundColor: "#ccc",
-          height: "2px",
-          position: "absolute",
-          left: focus ? "0" : "50%",
-          right: focus ? "0" : "50%",
-          bottom: 0,
-          transition: "all .15s linear"
-        }}
-      />
+      <Underline show={focus} />
     </div>
   );
 };
