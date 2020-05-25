@@ -17,13 +17,14 @@ const SubNav = props => (
   />
 );
 
-const Nav = ({ style }) => {
+const Nav = props => {
   return (
     <nav
       css={css`
         max-width: 400px;
         margin: auto;
       `}
+      {...props}
     >
       <HomeLink />
       <SubNav>
