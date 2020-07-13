@@ -1,20 +1,27 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 //
-import Social from "components/Social";
-import Copy from "components/Copy";
 import Name from "components/Name";
+import Follow from "components/Follow";
 
-const Footer = () => (
-  <footer>
+const Footer = (props) => (
+  <footer
+    css={css`
+      padding: 1em 0;
+    `}
+    {...props}
+  >
     <Name
       css={css`
         font-size: 18px;
         margin-top: 2em;
       `}
     />
-    <Social style={{ marginTop: "2em" }} />
-    <Copy style={{ marginBottom: "1em" }} />
+    <Follow
+      css={css`
+        padding: 0 1em;
+      `}
+    />
   </footer>
 );
 

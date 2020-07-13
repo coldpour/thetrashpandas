@@ -7,7 +7,7 @@ import Heading from "components/Heading";
 import Facebook from "components/icons/Facebook";
 import Instagram from "components/icons/Instagram";
 
-const SocialLink = rest => (
+const SocialLink = (rest) => (
   <a
     css={css`
       border-radius: 10em;
@@ -21,14 +21,8 @@ const SocialLink = rest => (
   />
 );
 
-export default () => (
-  <div
-    css={css`
-      padding: 1.5em 1em;
-    `}
-  >
-    <Heading>Can't make it then?</Heading>
-    <div>sign up for show alerts</div>
+export default (props) => (
+  <div {...props}>
     <SubscribeForm />
     <div
       css={css`
