@@ -4,8 +4,9 @@ import { css, jsx } from "@emotion/core";
 //
 import Logo from "components/Logo";
 import NavLink from "components/NavLink";
+import Name from "components/Name";
 
-const NavLogo = props => (
+const NavLogo = (props) => (
   <Logo
     css={css`
       height: 60px;
@@ -14,29 +15,7 @@ const NavLogo = props => (
   />
 );
 
-const NavName = props => (
-  <div {...props}>
-    <div
-      css={css`
-        text-align: left;
-        font-size: 12px;
-        line-height: 6px;
-      `}
-    >
-      The
-    </div>
-    <div
-      css={css`
-        font-size: 42px;
-        line-height: 36px;
-      `}
-    >
-      Trash Pandas
-    </div>
-  </div>
-);
-
-const HomeLink = props => (
+const HomeLink = (props) => (
   <NavLink
     to="/"
     css={css`
@@ -51,9 +30,9 @@ const HomeLink = props => (
         flex: 0 0 100px;
       `}
     />
-    <NavName
+    <Name
       css={css`
-        flex: 1;
+        font-size: 14px;
       `}
     />
   </NavLink>
