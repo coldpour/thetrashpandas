@@ -17,40 +17,46 @@ export default {
         path: "/",
         getData: () => ({
           songs: songs
-            .map(song => {
-              const [title, artist] = song.split("-").map(s => s.trim());
+            .map((song) => {
+              const [title, artist] = song.split("-").map((s) => s.trim());
               return { title, artist };
             })
             .sort((one, two) => {
-              const [a1, a2] = [one, two].map(song => song.artist);
+              const [a1, a2] = [one, two].map((song) => song.artist);
               return asc(a1, a2);
-            })
-        })
+            }),
+        }),
       },
       {
         path: "/blog",
         getData: () => ({
-          posts
+          posts,
         }),
-        children: posts.map(post => ({
+        children: posts.map((post) => ({
           path: `/post/${post.id}`,
           template: "src/containers/Post",
           getData: () => ({
-            post
-          })
-        }))
-      }
+            post,
+          }),
+        })),
+      },
     ];
   },
   plugins: [
     [
-      require.resolve("react-static-plugin-source-filesystem"),
+      "react-static-plugin-source-filesystem",
       {
-        location: path.resolve("./src/pages")
-      }
+        location: path.resolve("./src/pages"),
+      },
     ],
-    require.resolve("react-static-plugin-emotion"),
-    require.resolve("react-static-plugin-reach-router"),
-    require.resolve("react-static-plugin-sitemap")
-  ]
+    [
+      "react-static-plugin-favicons",
+      {
+        inputFile: path.resolve("./raccoon.svg"),
+      },
+    ],
+    "react-static-plugin-emotion",
+    "react-static-plugin-reach-router",
+    "react-static-plugin-sitemap",
+  ],
 };
