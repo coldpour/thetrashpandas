@@ -1,14 +1,14 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 
-export default ({ v, ...rest }) => (
+const IFrame = ({ className, ...rest }) => (
   <div
     css={css`
       position: relative;
       overflow: hidden;
       padding-top: 56.25%;
     `}
-    {...rest}
+    className={className}
   >
     <iframe
       css={css`
@@ -19,10 +19,9 @@ export default ({ v, ...rest }) => (
         width: 100%;
         height: 100%;
       `}
-      src={`https://www.youtube.com/embed/${v}`}
-      frameBorder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    />
+      {...rest}
+    ></iframe>
   </div>
 );
+
+export default IFrame;

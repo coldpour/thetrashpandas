@@ -5,7 +5,7 @@ import { useRouteData } from "react-static";
 import { Helmet } from "react-helmet";
 //
 import Nav from "components/Nav";
-import Video from "components/Video";
+import Videos from "components/Videos";
 import Banner from "components/Banner";
 import Soundcloud from "components/Soundcloud";
 import Songs from "components/Songs";
@@ -28,7 +28,7 @@ export default () => {
       />
       <Announcement />
       <Follow />
-      <Video />
+      <Videos />
       <Soundcloud />
       <Banner />
       <Songs songs={songs} />
