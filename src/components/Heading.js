@@ -2,10 +2,10 @@
 import React from "react";
 import { css, jsx } from "@emotion/core";
 
-const Heading = props => (
+const Heading = (props) => (
   <h2
     css={css`
-      margin: 0;
+      margin-top: 0;
     `}
     {...props}
   />

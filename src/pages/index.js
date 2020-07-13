@@ -11,7 +11,6 @@ import Soundcloud from "components/Soundcloud";
 import Songs from "components/Songs";
 import Footer from "components/Footer";
 import Motto from "components/Motto";
-import Follow from "components/Follow";
 import Announcement from "components/Announcement";
 
 export default () => {
@@ -28,7 +27,6 @@ export default () => {
         `}
       />
       <Announcement />
-      <Follow />
       <Videos />
       <Motto />
       <Soundcloud />

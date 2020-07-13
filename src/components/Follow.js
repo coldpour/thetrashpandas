@@ -3,7 +3,6 @@ import React from "react";
 import { css, jsx } from "@emotion/core";
 //
 import SubscribeForm from "components/SubscribeForm";
-import Heading from "components/Heading";
 import Facebook from "components/icons/Facebook";
 import Instagram from "components/icons/Instagram";
 
