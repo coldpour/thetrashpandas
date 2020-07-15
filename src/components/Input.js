@@ -2,19 +2,21 @@
 import React, { useState } from "react";
 import { css, jsx } from "@emotion/core";
 //
-const DefaultElement = props => <input {...props} />;
+import { isLight } from "components/Theme";
+
+const DefaultElement = (props) => <input {...props} />;
 
 const Underline = ({ show, ...rest }) => (
   <div
-    css={{
-      backgroundColor: "#ccc",
+    css={(theme) => ({
+      backgroundColor: isLight(theme) ? "#333" : "#ccc",
       height: "2px",
       position: "absolute",
       bottom: 0,
       transition: "all 0.15s linear",
       left: show ? 0 : "50%",
-      right: show ? 0 : "50%"
-    }}
+      right: show ? 0 : "50%",
+    })}
     {...rest}
   />
 );
@@ -35,38 +37,49 @@ const Input = ({
   return (
     <div
       className={className}
-      css={{
+      css={(theme) => ({
         position: "relative",
-        backgroundColor: hover ? "#444" : focus ? "#333" : "#222",
+        backgroundColor: isLight(theme)
+          ? hover
+            ? "#bbb"
+            : focus
+            ? "#ccc"
+            : "#ddd"
+          : hover
+          ? "#444"
+          : focus
+          ? "#333"
+          : "#222",
         padding: "9px",
-        borderRadius: "5px"
-      }}
+        borderRadius: "5px",
+      })}
     >
       <Element
-        css={{
+        css={(theme) => ({
           background: "none",
           border: "none",
-          color: "white",
+          color: isLight(theme) ? "black" : "white",
           display: "block",
           fontSize: "20px",
           fontFamily: "inherit",
           outline: "none",
           padding: 0,
-          width: "100%"
-        }}
-        onMouseOver={e => {
+          width: "100%",
+          margin: 0,
+        })}
+        onMouseOver={(e) => {
           setHover(true);
           if (onMouseOver) onMouseOver(e);
         }}
-        onMouseOut={e => {
+        onMouseOut={(e) => {
           setHover(false);
           if (onMouseOut) onMouseOut(e);
         }}
-        onFocus={e => {
+        onFocus={(e) => {
           setFocus(true);
           if (onFocus) onFocus(e);
         }}
-        onBlur={e => {
+        onBlur={(e) => {
           setFocus(false);
           if (onBlur) onBlur(e);
         }}

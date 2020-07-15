@@ -1,73 +1,46 @@
 /** @jsx jsx */
-import React from "react";
 import { css, jsx } from "@emotion/core";
 //
-import Form from "components/Form";
-import Button from "components/Button";
 import Input from "components/Input";
-import FormField from "components/FormField";
-import Fieldset from "components/Fieldset";
-import Radio from "components/Radio";
-import HeadlineSpan from "components/HeadlineSpan";
+import { Form, Submit, EmailField } from "components/Mailchimp";
 
-const StyledInput = props => (
+const StyledInput = (props) => (
   <Input
     css={css`
-      margin-top: 0.25em;
       border-radius: 5px 0px 0px 5px;
     `}
     {...props}
   />
 );
 
-const SubscribeForm = props => (
+const SubscribeForm = (props) => (
   <Form
-    action="https://facebook.us17.list-manage.com/subscribe/post?u=576be0d24557fe6a480b06523&amp;id=b5af92ccb0"
-    method="post"
-    name="mc-embedded-subscribe-form"
     css={css`
       display: flex;
-      align-items: flex-end;
+      align-items: stretch;
+      padding-top: 1em;
     `}
     {...props}
   >
-    <FormField
-      name="EMAIL"
-      type="email"
-      required
+    <EmailField
       input={StyledInput}
       css={css`
         flex: 1;
+        padding-top: 0;
+      `}
+    />
+    {/* <div css={{ background: "green", flex: 1 }}>email address</div> */}
+    <Submit
+      primary
+      css={css`
+        font-size: 1.25em;
+        border-radius: 0px 5px 5px 0px;
+        padding: 0.5em 1em;
       `}
     >
-      email address
-    </FormField>
-    {/* <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> */}
-    <div
-      css={{ position: "absolute", top: "-50px", left: "-5000px" }}
-      aria-hidden="true"
-    >
-      <Input
-        type="text"
-        name="b_576be0d24557fe6a480b06523_b5af92ccb0"
-        tabIndex="-1"
-        defaultValue=""
-      />
-    </div>
-    <Button
-      type="submit"
-      name="subscribe"
-      css={{ fontSize: "16px", borderRadius: "0px 5px 5px 0px" }}
-    >
       join
-    </Button>
+    </Submit>
   </Form>
 );
 
 export default SubscribeForm;
-
-/*
-
-  soundcloud customization
-
- */

@@ -3,6 +3,7 @@ import { css, jsx } from "@emotion/core";
 //
 import Follow from "components/Follow";
 import Heading from "components/Heading";
+import { LightThemeProvider } from "components/Theme";
 
 const Announcement = (props) => (
   <div
@@ -16,7 +17,9 @@ const Announcement = (props) => (
     <Heading>Next Show</Heading>
     <div>September - Boulder Fall Fest</div>
     <div>Details TBD</div>
-    <Follow />
+    <LightThemeProvider>
+      <Follow />
+    </LightThemeProvider>
   </div>
 );
 

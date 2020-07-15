@@ -22,7 +22,11 @@ const SocialLink = (rest) => (
 
 export default (props) => (
   <div {...props}>
-    <SubscribeForm />
+    <SubscribeForm
+      css={css`
+        margin-top: 0.5em;
+      `}
+    />
     <div
       css={css`
         margin-top: 0.5em;
