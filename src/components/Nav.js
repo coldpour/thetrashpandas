@@ -1,13 +1,11 @@
 /** @jsx jsx */
-import React from "react";
 import { css, jsx } from "@emotion/core";
 
 import MerchLink from "components/links/MerchLink";
 import HomeLink from "components/links/HomeLink";
 import BookLink from "components/links/BookLink";
-import ListenLink from "components/links/ListenLink";
 
-const SubNav = props => (
+const SubNav = (props) => (
   <div
     css={css`
       display: flex;
@@ -17,12 +15,13 @@ const SubNav = props => (
   />
 );
 
-const Nav = props => {
+const Nav = (props) => {
   return (
     <nav
       css={css`
         max-width: 400px;
         margin: auto;
+        padding-bottom: 1em;
       `}
       {...props}
     >
@@ -30,7 +29,6 @@ const Nav = props => {
       <SubNav>
         <MerchLink />
         <BookLink />
-        <ListenLink />
       </SubNav>
     </nav>
   );

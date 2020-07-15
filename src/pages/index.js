@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import React from "react";
-import { css, jsx } from "@emotion/core";
+import { jsx } from "@emotion/core";
 import { useRouteData } from "react-static";
 import { Helmet } from "react-helmet";
 //
@@ -12,6 +11,7 @@ import Songs from "components/Songs";
 import Footer from "components/Footer";
 import Motto from "components/Motto";
 import Announcement from "components/Announcement";
+import Merch from "components/Merch";
 
 export default () => {
   const { songs } = useRouteData();
@@ -21,15 +21,12 @@ export default () => {
       <Helmet>
         <title>Trash Pandas | Home</title>
       </Helmet>
-      <Nav
-        css={css`
-          margin-bottom: 1em;
-        `}
-      />
+      <Nav />
       <Announcement />
       <Videos />
       <Motto />
       <Soundcloud />
+      <Merch />
       <Banner />
       <Songs songs={songs} />
       <Footer />

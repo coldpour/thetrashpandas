@@ -10,6 +10,7 @@ const Button = ({ primary, element, ...restProps }) => {
     <Element
       css={(theme) => ({
         padding: "0.5em 1em",
+        display: "inline-block",
         backgroundColor: primary ? "#ffd400" : isLight(theme) ? "#333" : "#ddd",
         color: primary ? "#333" : isLight(theme) ? "#ddd" : "#333",
         border: "0 none",
