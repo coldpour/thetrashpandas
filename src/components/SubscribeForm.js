@@ -33,9 +33,7 @@ const SubscribeForm = (props) => (
     <Submit
       primary
       css={css`
-        font-size: 1.25em;
         border-radius: 0px 5px 5px 0px;
-        padding: 0.5em 1em;
       `}
     >
       join
