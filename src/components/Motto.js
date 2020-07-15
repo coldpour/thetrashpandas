@@ -1,19 +1,16 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import React, { Fragment } from "react";
+
+import PopRockMoshDisco from "components/PopRockMoshDisco";
+import YoureGonnaDance from "components/YoureGonnaDance";
+import { LightThemeProvider } from "./Theme";
 
 const Motto = (props) => (
-  <div
-    css={css`
-      background: white;
-      color: black;
-      font-size: 3em;
-      padding: 1em 0;
-    `}
-  >
-    <div>you're</div>
-    <div>gonna</div>
-    <div>dance</div>
-  </div>
+  <>
+    <LightThemeProvider>
+      <PopRockMoshDisco />
+    </LightThemeProvider>
+    <YoureGonnaDance />
+  </>
 );
 
 export default Motto;
