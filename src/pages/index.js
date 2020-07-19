@@ -7,7 +7,7 @@ import Nav from "components/Nav";
 import Videos from "components/Videos";
 import Banner from "components/Banner";
 import Soundcloud from "components/Soundcloud";
-import Songs from "components/Songs";
+import Setlist from "components/Setlist";
 import Footer from "components/Footer";
 import Motto from "components/Motto";
 import Announcement from "components/Announcement";
@@ -24,11 +24,11 @@ export default () => {
       <Nav />
       <Announcement />
       <Videos />
-      <Motto />
       <Soundcloud />
+      <Motto />
       <Merch />
       <Banner />
-      <Songs songs={songs} />
+      <Setlist songs={songs} />
       <Footer />
     </div>
   );

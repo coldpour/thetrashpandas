@@ -6,9 +6,7 @@ import { LightThemeProvider } from "./Theme";
 
 const Motto = (props) => (
   <>
-    <LightThemeProvider>
-      <PopRockMoshDisco />
-    </LightThemeProvider>
+    <PopRockMoshDisco />
     <YoureGonnaDance />
   </>
 );

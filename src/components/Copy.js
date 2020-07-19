@@ -1,7 +1,13 @@
-import React from "react";
+/** @jsx jsx */
+import { css, jsx } from "@emotion/core";
 
-const Copy = ({ style, ...restProps }) => (
-  <div style={{ padding: "1em", ...style }} {...restProps}>
+const Copy = (props) => (
+  <div
+    css={css`
+      padding: 1em 0 0;
+    `}
+    {...props}
+  >
     The Trash Pandas
     {" \u00a9 "}
     {new Date().getFullYear()}

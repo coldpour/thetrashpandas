@@ -3,6 +3,7 @@ import { css, jsx } from "@emotion/core";
 //
 import Name from "components/Name";
 import Follow from "components/Follow";
+import Copy from "components/Copy";
 
 const Footer = (props) => (
   <footer
@@ -22,6 +23,7 @@ const Footer = (props) => (
         padding: 0 1em;
       `}
     />
+    <Copy />
   </footer>
 );
 

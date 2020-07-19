@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import { jsx } from "@emotion/core";
 import { isLight } from "./Theme";
 
 const PopRockMoshDisco = (props) => (
@@ -8,7 +8,7 @@ const PopRockMoshDisco = (props) => (
       background: isLight(theme) ? "white" : "black",
       color: isLight(theme) ? "black" : "white",
       fontSize: "3em",
-      padding: "1em 0",
+      padding: "1em 0 .5em",
     })}
   >
     <div>pop</div>
