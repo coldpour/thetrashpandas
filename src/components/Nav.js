@@ -41,6 +41,7 @@ const Nav = (props) => {
           padding: 0.5em 0 1.5em;
           display: flex;
           align-items: center;
+          justify-content: space-around;
         `}
         {...props}
       >
