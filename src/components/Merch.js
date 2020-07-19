@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
+import { useEffect, useRef } from "react";
 import Heading from "components/Heading";
 
 import MerchLink2 from "components/MerchLink2";
@@ -31,11 +32,13 @@ const MerchItem = ({ href, src, alt, ...rest }) => (
   </MerchItemLink>
 );
 
-const setScrollLeft = (node) => {
-  node.scrollLeft = 200;
-};
-
 const Merch = (props) => {
+  const carusel = useRef();
+
+  useEffect(() => {
+    carusel.current.scrollLeft = 200;
+  }, []);
+
   return (
     <div
       css={css`
@@ -61,7 +64,7 @@ const Merch = (props) => {
             flex: 0 0 auto;
           }
         `}
-        ref={setScrollLeft}
+        ref={carusel}
       >
         <MerchItem
           href="https://shop.spreadshirt.com/trash-pandas/og+black+panda-A5dd07922f937641d6cc45def?productType=1408&sellable=OwR0m5ZeoAIzyXq5bLwz-1408-8&appearance=1"
