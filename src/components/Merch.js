@@ -60,8 +60,15 @@ const Merch = (props) => {
           :before,
           :after {
             content: "";
-            width: 90px;
+            width: calc(50% - 100px);
             flex: 0 0 auto;
+          }
+          @media (min-width: 600px) {
+            justify-content: center;
+            :before,
+            :after {
+              width: 0px;
+            }
           }
         `}
         ref={carusel}
