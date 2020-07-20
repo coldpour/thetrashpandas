@@ -6,6 +6,7 @@ const Heading = (props) => (
   <h2
     css={css`
       margin-top: 0;
+      font-size: 2em;
     `}
     {...props}
   />
