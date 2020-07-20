@@ -12,7 +12,11 @@ const Announcement = (props) => (
       color: black;
       background: white;
       padding: 1.5em 1em 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     `}
+    {...props}
   >
     <Heading>Next Show</Heading>
     <div>September - Boulder Fall Fest</div>
