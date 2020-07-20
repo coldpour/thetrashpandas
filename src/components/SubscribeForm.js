@@ -19,6 +19,7 @@ const SubscribeForm = (props) => (
       display: flex;
       align-items: stretch;
       padding-top: 1em;
+      justify-content: center;
     `}
     {...props}
   >
