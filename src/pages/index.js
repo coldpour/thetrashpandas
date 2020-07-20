@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx, css } from "@emotion/core";
 import { useRouteData } from "react-static";
 import { Helmet } from "react-helmet";
 //
@@ -22,10 +22,52 @@ export default () => {
         <title>Trash Pandas | Home</title>
       </Helmet>
       <Nav />
-      <Announcement />
-      <Videos />
-      <Soundcloud />
-      <Motto />
+      <div
+        css={css`
+          display: flex;
+          flex-direction: column;
+          @media (min-width: 800px) {
+            flex-direction: row;
+          }
+        `}
+      >
+        <Announcement
+          css={css`
+            flex: 0 0 50%;
+            @media (min-width: 800px) {
+              order: 2;
+            }
+          `}
+        />
+        <Videos
+          css={css`
+            flex: 0 0 50%;
+            @media (min-width: 800px) {
+              order: 1;
+            }
+          `}
+        />
+      </div>
+      <div
+        css={css`
+          display: flex;
+          flex-direction: column;
+          @media (min-width: 800px) {
+            flex-direction: row;
+          }
+        `}
+      >
+        <Soundcloud
+          css={css`
+            flex-basis: 50%;
+          `}
+        />
+        <Motto
+          css={css`
+            flex-basis: 50%;
+          `}
+        />
+      </div>
       <Merch />
       <Banner />
       <Setlist songs={songs} />
