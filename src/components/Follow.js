@@ -5,6 +5,7 @@ import { css, jsx } from "@emotion/core";
 import SubscribeForm from "components/SubscribeForm";
 import Facebook from "components/icons/Facebook";
 import Instagram from "components/icons/Instagram";
+import Email from "components/icons/Email";
 
 const SocialLink = (rest) => (
   <a
@@ -57,6 +58,18 @@ export default (props) => (
             position: absolute;
             top: 5px;
             left: 5px;
+          `}
+        />
+      </SocialLink>
+      <SocialLink href="mailto:thetrashpandasmusic@gmail.com">
+        <Email
+          css={css`
+            width: 20px;
+            position: absolute;
+            top: 4px;
+            left: 5px;
+            fill: #ddd;
+            stroke: #333;
           `}
         />
       </SocialLink>
