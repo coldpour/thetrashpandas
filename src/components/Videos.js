@@ -14,7 +14,12 @@ const TwoColumnVid = (props) => (
 );
 
 const Videos = (props) => (
-  <div {...props}>
+  <div
+    css={css`
+      width: 100%;
+    `}
+    {...props}
+  >
     <Video v="5B4usFO1-64" />
     <div
       css={css`
