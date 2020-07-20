@@ -33,6 +33,9 @@ const Nav = (props) => {
         max-width: 400px;
         margin: auto;
         padding-bottom: 1em;
+        @media (min-width: 600px) {
+          padding: 1.5em 0 2em;
+        }
       `}
       {...props}
     >
@@ -56,6 +59,7 @@ const Nav = (props) => {
         <div
           css={css`
             position: relative;
+            left: -8px;
           `}
         >
           <NavLink to="/">
